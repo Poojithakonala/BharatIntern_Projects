@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set global styles */
+body {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Background image with opacity */
+.container::before {
+    content: "";
+    background: url("https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5lyavS59mazOFnb55Z6znQ.png") no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Header navigation bar */
+.container .navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .navbar .left img {
+    height: 100px;
+    margin-left: 35px;
+}
+
+.container .navbar .right {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+/* Language dropdown and Sign In button */
+.container .navbar .right .language,
+.container .navbar .right button {
+    font-size: 18px;
+    padding: 7px 10px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+.container .navbar .right button {
+    font-weight: 400;
+    background: #e50914;
+    border-radius: 4px;
+}
+
+/* Title section */
+.container .title {
+    padding: 70px 45px;
+}
+
+.container .title .content {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.container .title .content h1,
+.container .title .content h2 {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Email subscription form */
+.container .title .content form h3 {
+    font-size: 1rem;
+    margin: 18px 0;
+    text-align: center;
+}
+
+.container .title .content form .email {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container .title .content form .email input {
+    height: 60px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.container .title .content form .email button {
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0 4px 4px 0;
+    border: none;
+}
+
+.container .title .content form .email button:hover {
+    background-color: #f40612;
+}
+
+.container .title .content form .email button a {
+    color: white;
+    text-decoration: none;
+}
