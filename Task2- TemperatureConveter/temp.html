@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Veesam Sai vamsi\Downloads\geometry\geometry\twodim\temp.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="converter">
+            <label for="celsius">Celsius:</label>
+            <input type="number" id="celsius" placeholder="Enter temperature in Celsius" step="0.01">
+        </div>
+        <div class="converter">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" step="0.01">
+        </div>
+        <button id="convertBtn">Convert</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const celsiusInput = document.getElementById("celsius");
+            const fahrenheitInput = document.getElementById("fahrenheit");
+            const convertBtn = document.getElementById("convertBtn");
+            const resultText = document.getElementById("result");
+
+            convertBtn.addEventListener("click", function() {
+                if (celsiusInput.value === "") {
+                    alert("Please enter a temperature in Celsius.");
+                    return;
+                }
+
+                const celsius = parseFloat(celsiusInput.value);
+                const fahrenheit = (celsius * 9/5) + 32;
+
+                fahrenheitInput.value = fahrenheit.toFixed(2);
+                resultText.innerText = `${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F`;
+            });
+        });
+    </script>
+</body>
+</html>
